@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Canciones Personalizadas - Plaza Santa Ana</title>
+    <title>Canciones Personalizadas - Plaza Santa Ana (Edición USA)</title>
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -136,7 +136,7 @@
         
         <div class="space-y-4 text-xs">
             <div class="bg-blue-50 p-2 rounded border border-blue-200 mb-4">
-                <p class="text-blue-600">🛠️ <strong>Modo Editor</strong><br>Ajusta precios y textos en tiempo real.</p>
+                <p class="text-blue-600">🛠️ <strong>Modo EE.UU. (USD)</strong><br>Ajusta precios en DÓLARES.</p>
             </div>
 
             <div>
@@ -148,22 +148,23 @@
                 <h4 class="text-santa-dark font-bold mb-2">Precios (USD)</h4>
                 <div class="grid grid-cols-1 gap-2">
                     <div>
-                        <label class="block text-gray-500">🎵 Básico (Audio)</label>
+                        <label class="block text-gray-500">🎵 Esencia (Audio)</label>
                         <input type="number" id="edit-price-basic" class="input-field w-full p-2 rounded" oninput="updateContent()">
                     </div>
                     <div>
-                        <label class="block text-gray-500">📱 Premium (Video Simple)</label>
+                        <label class="block text-gray-500">📱 Recuerdo (Video Simple)</label>
                         <input type="number" id="edit-price-premium" class="input-field w-full p-2 rounded" oninput="updateContent()">
                     </div>
                     <div>
-                        <label class="block text-gray-500">✨ Animado (Reel + Animación)</label>
+                        <label class="block text-gray-500">✨ Legado (Reel + Animación)</label>
                         <input type="number" id="edit-price-animated" class="input-field w-full p-2 rounded" oninput="updateContent()">
                     </div>
                      <div>
-                        <label class="block text-gray-500">⚡ Costo Extra Urgente</label>
+                        <label class="block text-gray-500">⚡ Costo Extra Urgente (USD)</label>
                         <input type="number" id="edit-price-rush" class="input-field w-full p-2 rounded" oninput="updateContent()">
                     </div>
                 </div>
+                <p class="text-[10px] text-gray-500 italic mt-2">ℹ️ En esta versión no se cobra anticipo: el pago es único al recibir la canción, para que el paisano no pague doble comisión de envío de dinero.</p>
             </div>
 
             <div class="bg-santa-yellow/20 p-3 rounded mt-6 border border-santa-yellow">
@@ -181,7 +182,7 @@
     <nav class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm">
         <div class="max-w-6xl mx-auto px-4 py-2 flex justify-between items-center">
             <div class="flex items-center gap-3">
-                <!-- Logo Imagen (ACTUALIZADO .png) -->
+                <!-- Logo Imagen -->
                 <div class="w-12 h-12 md:w-14 md:h-14 rounded-full overflow-hidden border-2 border-santa-pink shadow-md bg-white">
                     <img src="Plaza Santa Ana.png" alt="Logo Plaza Santa Ana" class="w-full h-full object-cover">
                 </div>
@@ -189,7 +190,7 @@
                     <h1 class="text-xl md:text-2xl font-heading font-bold text-black leading-none uppercase tracking-wide">
                         Plaza <span class="text-santa-pink">Santa Ana</span>
                     </h1>
-                    <p class="text-[10px] text-gray-500 uppercase tracking-widest hidden md:block">Canciones Personalizadas</p>
+                    <p class="text-[10px] text-gray-500 uppercase tracking-widest hidden md:block">Canciones Personalizadas · Edición USA 🇺🇸</p>
                 </div>
             </div>
             <div id="affiliate-badge" class="hidden text-[10px] bg-santa-cyan/10 text-santa-cyan border border-santa-cyan rounded-full px-3 py-1 font-bold">
@@ -205,35 +206,40 @@
         <div class="absolute top-10 left-10 text-santa-pink opacity-10 text-6xl animate-float"><i class="fas fa-spa"></i></div>
         <div class="absolute top-20 right-10 text-santa-cyan opacity-10 text-8xl"><i class="fas fa-sun"></i></div>
 
+        <!-- Bandera dual decorativa -->
+        <div class="inline-flex items-center gap-2 mb-3 text-3xl">
+            <span>🇲🇽</span><i class="fas fa-heart text-santa-pink text-lg"></i><span>🇺🇸</span>
+        </div>
+
         <h2 class="text-5xl md:text-7xl font-hand text-santa-pink mb-2 rotate-2 inline-block drop-shadow-sm">
             ¡Dilo con música!
         </h2>
         <h3 class="text-2xl md:text-4xl font-heading font-bold text-santa-dark uppercase mb-6 mt-2">
-            Tu Historia, <span class="text-santa-cyan">Tu Canción.</span>
+            Música que <span class="text-santa-cyan">cruza fronteras.</span>
         </h3>
         
         <p class="text-gray-600 max-w-2xl mx-auto mb-8 text-lg">
-            Convertimos tus sentimientos en una canción única. El regalo perfecto para cumpleaños, aniversarios o simplemente para decir "Gracias".
+            Sorprende a esa persona especial, esté donde esté: en Santa Ana, en cualquier rincón de México o aquí mismo en Estados Unidos. Cumpleaños, aniversarios, serenatas digitales o simplemente para decir "te extraño" o "te amo".
         </p>
 
         <!-- Promoción Editable -->
         <div class="inline-block bg-santa-yellow text-black shadow-lg rounded-full px-6 py-2 transform -rotate-1 hover:rotate-0 transition-transform cursor-default">
             <p class="text-sm font-bold uppercase tracking-wider">
-                <i class="fas fa-heart text-red-600 mr-2"></i> <span id="display-promo">Precios promoción en febrero</span>
+                <i class="fas fa-heart text-red-600 mr-2"></i> <span id="display-promo">Precios especiales Santa Ana</span>
             </p>
         </div>
     </header>
 
     <!-- Pricing Plans Section -->
-    <main class="max-w-7xl mx-auto px-4 pb-24 grid grid-cols-1 md:grid-cols-3 gap-6 items-end">
+    <main class="max-w-7xl mx-auto px-4 pb-12 grid grid-cols-1 md:grid-cols-3 gap-6 items-end">
         
-        <!-- Plan Básico -->
+        <!-- Plan Esencia -->
         <div class="plan-card bg-white rounded-3xl p-6 relative group card-shadow border-t-4 border-gray-300 h-fit mb-4 md:mb-0">
             <div class="text-center mb-4">
                 <div class="w-14 h-14 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4 text-xl text-gray-600">
                     <i class="fas fa-music"></i>
                 </div>
-                <h3 class="text-2xl font-heading font-bold text-gray-800 uppercase">Básico</h3>
+                <h3 class="text-2xl font-heading font-bold text-gray-800 uppercase">Esencia</h3>
                 <p class="text-xs text-gray-500">Solo Audio</p>
             </div>
             
@@ -242,7 +248,7 @@
                 <span class="text-sm text-gray-500 uppercase">USD</span>
             </div>
             
-            <!-- Audio Player (ACTUALIZADO .mp3) -->
+            <!-- Audio Player -->
             <div class="mb-6 bg-gray-50 p-2 rounded-lg border border-gray-100">
                 <p class="text-[10px] text-gray-400 mb-1 text-center uppercase tracking-wider">Escuchar Ejemplo</p>
                 <audio controls class="w-full h-8" onplay="stopOtherMedia(this)">
@@ -257,23 +263,23 @@
                 <li class="flex items-start gap-3"><i class="fas fa-clock text-gray-400 mt-1"></i> Duración: 1:30 - 2:30 min</li>
             </ul>
 
-            <button onclick="selectPlan('Básico')" class="w-full py-3 rounded-xl border-2 border-gray-200 text-gray-600 font-bold uppercase hover:border-santa-dark hover:text-santa-dark transition-colors">
-                Elegir Básico
+            <button onclick="selectPlan('Esencia')" class="w-full py-3 rounded-xl border-2 border-gray-200 text-gray-600 font-bold uppercase hover:border-santa-dark hover:text-santa-dark transition-colors">
+                Elegir Esencia
             </button>
         </div>
 
-        <!-- Plan Animado (MÁS POPULAR) -->
+        <!-- Plan Legado (MÁS POPULAR) -->
         <div class="plan-card bg-white rounded-3xl p-6 md:p-8 relative z-10 card-shadow border-2 border-santa-cyan transform md:scale-105 order-first md:order-none">
             <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-santa-cyan text-white font-bold px-4 py-1 rounded-full text-xs uppercase tracking-widest shadow-md whitespace-nowrap">
-                ★ Más Popular ★
+                ★ El más elegido ★
             </div>
             
             <div class="text-center mb-6">
                 <div class="w-16 h-16 bg-cyan-50 rounded-full flex items-center justify-center mx-auto mb-4 text-3xl text-santa-cyan animate-pulse-slow">
                     <i class="fas fa-magic"></i>
                 </div>
-                <h3 class="text-3xl font-heading font-bold text-santa-dark uppercase">Animado</h3>
-                <p class="text-xs text-santa-cyan font-bold">Video + Animación Bucle</p>
+                <h3 class="text-3xl font-heading font-bold text-santa-dark uppercase">Legado</h3>
+                <p class="text-xs text-santa-cyan font-bold">Video + Animación + Versión Corta</p>
             </div>
             
             <div class="text-center my-6 border-y border-dashed border-santa-cyan/30 py-4">
@@ -281,9 +287,9 @@
                 <span class="text-sm text-gray-500 uppercase">USD</span>
             </div>
 
-            <!-- Video Player (ACTUALIZADO Animado.mp4) -->
+            <!-- Video Player -->
             <div class="mb-6 bg-cyan-50 p-2 rounded-lg border border-cyan-100">
-                <p class="text-[10px] text-santa-cyan mb-1 text-center uppercase tracking-wider font-bold">Ver Ejemplo Animado</p>
+                <p class="text-[10px] text-santa-cyan mb-1 text-center uppercase tracking-wider font-bold">Ver Ejemplo Legado</p>
                 <video controls class="w-full rounded bg-black max-h-40 object-cover" onplay="stopOtherMedia(this)">
                     <source src="Animado.mp4" type="video/mp4">
                     Tu navegador no soporta video.
@@ -291,44 +297,44 @@
             </div>
             
             <ul class="space-y-3 text-sm text-gray-600 mb-8">
-                <li class="flex items-start gap-3"><i class="fas fa-check-circle text-santa-cyan mt-1"></i> <strong>Todo lo del plan Básico</strong></li>
+                <li class="flex items-start gap-3"><i class="fas fa-check-circle text-santa-cyan mt-1"></i> <strong>Todo lo del plan Esencia</strong></li>
                 <li class="flex items-start gap-3 bg-cyan-50 p-2 rounded-lg border border-cyan-100">
                     <i class="fas fa-film text-santa-cyan mt-1"></i> 
                     <span class="text-xs">
-                        <strong>Animación de 6 seg (Bucle)</strong> integrada.<br>
+                        <strong>Animación de 5 a 8 seg</strong> (al final del video eso le dará un toque increíble).<br>
                         <span class="text-[10px] text-gray-500 italic block mt-1 leading-tight">
-                            *La animación se repite en bucle si la imagen y secuencia lo permiten; de lo contrario se aplica una sola vez.
+                            Además contará con una <strong>versión corta de 15 a 30 seg</strong>, ideal para compartir en redes sociales y estados.
                         </span>
                     </span>
                 </li>
                 <li class="flex items-start gap-3"><i class="fas fa-image text-santa-cyan mt-1"></i> 
-                    <span class="text-xs">Usamos tu foto o generamos una imagen acorde a la historia.</span>
+                    <span class="text-xs">Usamos tu foto o generamos una imagen.</span>
                 </li>
             </ul>
 
-            <button onclick="selectPlan('Animado')" class="w-full bg-santa-cyan text-white font-bold py-4 rounded-xl uppercase tracking-widest hover:bg-cyan-600 transition-all shadow-lg hover:shadow-cyan-500/30">
-                Elegir Animado
+            <button onclick="selectPlan('Legado')" class="w-full bg-santa-cyan text-white font-bold py-4 rounded-xl uppercase tracking-widest hover:bg-cyan-600 transition-all shadow-lg hover:shadow-cyan-500/30">
+                Elegir Legado
             </button>
         </div>
 
-        <!-- Plan Premium -->
+        <!-- Plan Recuerdo -->
         <div class="plan-card bg-white rounded-3xl p-6 relative group card-shadow border-t-4 border-santa-pink h-fit mb-4 md:mb-0">
             <div class="text-center mb-4">
                 <div class="w-14 h-14 bg-pink-50 rounded-full flex items-center justify-center mx-auto mb-4 text-xl text-santa-pink">
                     <i class="fas fa-video"></i>
                 </div>
-                <h3 class="text-2xl font-heading font-bold text-gray-800 uppercase">Premium</h3>
+                <h3 class="text-2xl font-heading font-bold text-gray-800 uppercase">Recuerdo</h3>
                 <p class="text-xs text-gray-500">Audio + Video Reel</p>
             </div>
 
             <div class="text-center my-4">
-                <span class="text-4xl font-bold text-santa-dark">$<span id="display-price-premium">79</span></span>
+                <span class="text-4xl font-bold text-santa-dark">$<span id="display-price-premium">69</span></span>
                 <span class="text-sm text-gray-500 uppercase">USD</span>
             </div>
 
-            <!-- Video Player (ACTUALIZADO Premium.mp4) -->
+            <!-- Video Player -->
             <div class="mb-6 bg-pink-50 p-2 rounded-lg border border-pink-100">
-                <p class="text-[10px] text-santa-pink mb-1 text-center uppercase tracking-wider font-bold">Ver Ejemplo Premium</p>
+                <p class="text-[10px] text-santa-pink mb-1 text-center uppercase tracking-wider font-bold">Ver Ejemplo Recuerdo</p>
                 <video controls class="w-full rounded bg-black max-h-40 object-cover" onplay="stopOtherMedia(this)">
                     <source src="Premium.mp4" type="video/mp4">
                     Tu navegador no soporta video.
@@ -336,37 +342,89 @@
             </div>
 
             <ul class="space-y-4 text-sm text-gray-600 mb-8">
-                <li class="flex items-start gap-3"><i class="fas fa-check-circle text-santa-pink mt-1"></i> <strong>Todo lo del plan Básico</strong></li>
+                <li class="flex items-start gap-3"><i class="fas fa-check-circle text-santa-pink mt-1"></i> <strong>Todo lo del plan Esencia</strong></li>
                 <li class="flex items-start gap-3 bg-pink-50 p-2 rounded-lg">
                     <i class="fas fa-photo-video text-santa-pink mt-1"></i> 
-                    <span class="text-xs">Video tipo Reel (Vertical) listo para redes (Imagen Sencilla).</span>
+                    <span class="text-xs">Video tipo Reel (Vertical) listo para subir a TikTok o Instagram.</span>
                 </li>
             </ul>
 
-            <button onclick="selectPlan('Premium')" class="w-full py-3 rounded-xl border-2 border-gray-200 text-gray-600 font-bold uppercase hover:border-santa-pink hover:text-santa-pink transition-colors">
-                Elegir Premium
+            <button onclick="selectPlan('Recuerdo')" class="w-full py-3 rounded-xl border-2 border-gray-200 text-gray-600 font-bold uppercase hover:border-santa-pink hover:text-santa-pink transition-colors">
+                Elegir Recuerdo
             </button>
         </div>
 
     </main>
 
+    <!-- Nota: destino de la canción + pago desde EE.UU. -->
+    <div class="max-w-4xl mx-auto px-4 pb-8">
+        <div class="bg-gradient-to-r from-blue-50 to-indigo-50 border-2 border-blue-200 rounded-2xl p-5 shadow-sm">
+            <div class="flex flex-col sm:flex-row items-start gap-4">
+                <div class="text-4xl">
+                    🎁🌎
+                </div>
+                <div class="text-center sm:text-left">
+                    <h4 class="text-blue-800 font-heading font-bold uppercase text-lg tracking-wide">
+                        Para quien sea, donde sea
+                    </h4>
+                    <p class="text-sm text-blue-700 mt-1 leading-relaxed">
+                        La canción puede ser para alguien que está en Santa Ana, en cualquier parte de México o incluso aquí en Estados Unidos. Tú nos cuentas la historia y nosotros la convertimos en música.
+                    </p>
+                    <p class="text-xs text-blue-600 mt-2 italic">
+                        *Pagas en dólares y <strong>sin anticipo</strong>: el precio ya incluye la comisión de envío de dinero, así que solo haces una transferencia cuando tu canción esté lista.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Invitación Sutil: Invitaciones Digitales + Descuento Combo -->
+    <div class="max-w-4xl mx-auto px-4 pb-10">
+        <div class="bg-gradient-to-br from-santa-pink/5 via-white to-santa-cyan/5 border-2 border-dashed border-santa-pink/30 rounded-3xl p-6 md:p-8 shadow-sm relative overflow-hidden">
+            <!-- Elementos decorativos -->
+            <div class="absolute top-2 right-2 text-santa-pink/10 text-5xl"><i class="fas fa-envelope-open-text"></i></div>
+            <div class="absolute bottom-2 left-2 text-santa-cyan/10 text-4xl"><i class="fas fa-gift"></i></div>
+
+            <div class="relative text-center">
+                <div class="inline-flex items-center justify-center w-14 h-14 bg-santa-yellow/30 rounded-full mb-4 text-2xl text-santa-pink">
+                    <i class="fas fa-bell"></i>
+                </div>
+                <h4 class="text-santa-dark font-heading font-bold uppercase text-xl md:text-2xl tracking-wide mb-2">
+                    ¿Tienes un evento próximo?
+                </h4>
+                <p class="text-sm md:text-base text-gray-600 max-w-2xl mx-auto leading-relaxed mb-4">
+                    También creamos <strong class="text-santa-pink">Invitaciones Digitales</strong> personalizadas para bodas, cumpleaños, revelación de bebé, bautizos, XV años y más. Diseños únicos que encantarán a tus invitados, sin importar si el evento es aquí en USA o en México.
+                </p>
+
+                <div class="inline-block bg-santa-yellow text-black shadow-md rounded-full px-5 py-2 transform -rotate-1 hover:rotate-0 transition-transform mb-3">
+                    <p class="text-xs md:text-sm font-bold uppercase tracking-wider">
+                        <i class="fas fa-percent text-red-600 mr-1"></i> Descuento especial al contratar ambos servicios
+                    </p>
+                </div>
+                <p class="text-xs text-gray-500 italic">
+                    Combina tu canción personalizada con una invitación digital y obtén un descuento adicional. Pregúntanos por el paquete combo.
+                </p>
+            </div>
+        </div>
+    </div>
+
     <!-- Footer Note -->
     <div class="max-w-4xl mx-auto px-6 text-center pb-12">
         <div class="bg-white shadow-sm border border-gray-200 p-6 rounded-2xl inline-flex flex-col md:flex-row items-center gap-4">
             <div class="text-4xl text-santa-pink animate-bounce">
-                <i class="fas fa-map-marker-alt"></i>
+                <i class="fas fa-hand-holding-heart"></i>
             </div>
             <div class="text-left">
-                <h4 class="text-santa-dark font-heading font-bold uppercase text-lg">¿Eres de Santa Ana? 🇲🇽</h4>
+                <h4 class="text-santa-dark font-heading font-bold uppercase text-lg">Pago desde USA 🇺🇸</h4>
                 <p class="text-sm text-gray-600">
-                    ¡Tenemos una promoción especial para paisanos! <br>
-                    <strong>Pagas hasta tener tu canción lista y entregada.</strong>
+                    Pagas en dólares al recibir tu canción, sin anticipo. Aceptamos <strong>transferencia (Zelle, Cash App, Apple Pay)</strong> o <strong>remesa (Western Union, MoneyGram, Walmart2World)</strong> según prefieras.<br>
+                    Una sola transferencia, sin pagarte dos veces la comisión.
                 </p>
             </div>
         </div>
         
         <p class="mt-8 text-xs text-gray-400">
-            <i class="fas fa-clock mr-1"></i> Entrega estándar: <strong>4 días hábiles</strong>. Opción Express disponible en el formulario.
+            <i class="fas fa-clock mr-1"></i> Entrega estándar: <strong>4 días hábiles</strong>. Opción Express disponible.
         </p>
     </div>
 
@@ -391,13 +449,29 @@
                 <form id="client-form" onsubmit="handleOrder(event)" class="p-6 md:p-8 space-y-6 max-h-[75vh] overflow-y-auto">
                     
                     <!-- Resumen del Plan -->
-                    <div class="flex justify-between items-center bg-gray-50 p-3 rounded-lg border border-gray-200">
-                        <div>
-                            <p class="text-[10px] text-gray-500 uppercase font-bold">Paquete Seleccionado</p>
-                            <p id="modal-plan-name" class="text-santa-pink font-heading font-bold text-xl">Premium</p>
+                    <div class="bg-gradient-to-br from-gray-50 to-white p-4 rounded-xl border border-gray-200">
+                        <div class="flex justify-between items-center mb-3">
+                            <div>
+                                <p class="text-[10px] text-gray-500 uppercase font-bold">Paquete Seleccionado</p>
+                                <p id="modal-plan-name" class="text-santa-pink font-heading font-bold text-xl">Recuerdo</p>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-[10px] text-gray-500 uppercase font-bold">Total a pagar</p>
+                                <p id="modal-plan-price" class="text-gray-800 font-bold text-xl">$69 USD</p>
+                            </div>
                         </div>
-                        <div class="text-right">
-                            <p id="modal-plan-price" class="text-gray-800 font-bold text-xl">$79 USD</p>
+                        <!-- Nota de pago único sin anticipo -->
+                        <div class="border-t border-dashed border-gray-200 pt-3 space-y-1.5">
+                            <div class="flex justify-between items-center text-sm">
+                                <span class="text-santa-pink font-bold flex items-center gap-1.5">
+                                    <i class="fas fa-money-bill-wave"></i> Pago único al recibir
+                                </span>
+                                <span class="text-santa-pink font-bold">$<span id="modal-total">69</span> USD</span>
+                            </div>
+                            <p class="text-[10px] text-gray-500 italic pt-1 flex items-start gap-1">
+                                <i class="fas fa-info-circle text-blue-400 mt-0.5"></i>
+                                <span>En esta versión para paisanos <strong>no pedimos anticipo</strong>: pagas una sola vez con tu remesa cuando la canción esté lista, así no pagas doble comisión de envío de dinero.</span>
+                            </p>
                         </div>
                     </div>
 
@@ -410,15 +484,10 @@
                                 <input type="text" id="client-name" required class="input-field w-full rounded p-3 text-sm" placeholder="Ej. Juan Pérez">
                             </div>
                             <div>
-                                <label class="block text-xs text-gray-500 font-bold mb-1">Ciudad / País</label>
-                                <input type="text" id="client-location" required class="input-field w-full rounded p-3 text-sm" placeholder="Ej. Los Ángeles, CA">
+                                <label class="block text-xs text-gray-500 font-bold mb-1">Tu Ciudad y Estado (USA)</label>
+                                <input type="text" id="client-location" required class="input-field w-full rounded p-3 text-sm" placeholder="Ej. Houston, Texas">
                             </div>
                         </div>
-                        
-                        <label class="flex items-center gap-2 cursor-pointer bg-santa-cyan/5 p-3 rounded border border-santa-cyan/20">
-                            <input type="checkbox" id="check-santa-ana" class="w-5 h-5 text-santa-cyan rounded focus:ring-santa-cyan">
-                            <span class="text-sm text-gray-700 font-bold">🙋‍♂️ ¡Soy de Santa Ana! (Pago contra entrega)</span>
-                        </label>
                     </div>
 
                     <!-- Datos de la Canción -->
@@ -431,6 +500,17 @@
                         </div>
 
                         <div>
+                            <label class="block text-xs text-gray-500 font-bold mb-1">¿Dónde se encuentra esa persona?</label>
+                            <select id="recipient-location" class="input-field w-full rounded p-3 text-sm">
+                                <option value="Santa Ana Hueytlalpan">📍 Santa Ana Hueytlalpan, Hidalgo</option>
+                                <option value="Otra parte de México">🇲🇽 Otra parte de México</option>
+                                <option value="Estados Unidos">🇺🇸 Estados Unidos (aquí conmigo)</option>
+                                <option value="Otro país">🌎 Otro país</option>
+                            </select>
+                            <p class="text-[10px] text-gray-400 mt-1 italic">*Esto nos ayuda a sugerirte el mejor momento y formato para entregar tu canción.</p>
+                        </div>
+
+                        <div>
                             <label class="block text-xs text-gray-500 font-bold mb-1">Ocasión</label>
                             <select id="song-occasion" class="input-field w-full rounded p-3 text-sm">
                                 <option value="Cumpleaños">🎂 Cumpleaños</option>
@@ -438,6 +518,8 @@
                                 <option value="Día de la Madre/Padre">👨‍👩‍👧 Mamá / Papá</option>
                                 <option value="Agradecimiento">🙏 Agradecimiento</option>
                                 <option value="Perdón">🥺 Pedir Perdón</option>
+                                <option value="Te Extraño">✈️ Te Extraño</option>
+                                <option value="Sorpresa/Regalo">🎁 Sorpresa / Regalo</option>
                                 <option value="Otro">✨ Otra razón</option>
                             </select>
                         </div>
@@ -449,13 +531,23 @@
                         </div>
                     </div>
 
+                    <!-- Referido (Opcional) -->
+                    <div class="space-y-4">
+                        <h4 class="text-sm font-bold text-gray-800 border-b pb-2">3. ¿Quién te recomendó? <span class="text-gray-400 font-normal text-xs">(Opcional)</span></h4>
+                        <div>
+                            <label class="block text-xs text-gray-500 font-bold mb-1">Nombre de la persona que te recomendó</label>
+                            <input type="text" id="client-referrer" class="input-field w-full rounded p-3 text-sm" placeholder="Ej. María González (si nadie te recomendó, deja este campo vacío)">
+                            <p class="text-[10px] text-gray-400 mt-1 italic">*Si un amigo o familiar te invitó a conocer nuestros servicios, anótalo aquí para darle un agradecimiento especial.</p>
+                        </div>
+                    </div>
+
                     <!-- OPCIONES DE IMAGEN (SOLO PARA PLANES CON VIDEO) -->
                     <div id="video-options-container" class="hidden space-y-4 bg-gray-50 p-3 rounded border border-gray-200">
                         <h4 class="text-xs font-bold text-santa-cyan border-b border-gray-200 pb-1 uppercase">📸 Opción de Imagen para el Video</h4>
                         <div class="space-y-2">
                             <label class="flex items-center gap-2 cursor-pointer">
                                 <input type="radio" name="image-pref" value="Enviar Foto" class="text-santa-cyan focus:ring-santa-cyan" checked>
-                                <span class="text-sm text-gray-700">Enviaré una foto mía por WhatsApp</span>
+                                <span class="text-sm text-gray-700">Enviaré una foto por WhatsApp</span>
                             </label>
                             <label class="flex items-center gap-2 cursor-pointer">
                                 <input type="radio" name="image-pref" value="Generar Imagen" class="text-santa-cyan focus:ring-santa-cyan">
@@ -468,7 +560,16 @@
                     <div class="space-y-4 pt-2">
                         <label class="flex items-center gap-2 cursor-pointer p-3 rounded border border-gray-200 hover:bg-gray-50">
                             <input type="checkbox" id="check-rush" class="w-4 h-4 text-red-500 rounded focus:ring-red-500" onchange="updateTotal()">
-                            <span class="text-sm text-gray-600">🚀 <strong>Pedido Urgente</strong> (Entrega Rápida) <span class="text-red-500 text-xs ml-1 font-bold">+ $<span id="display-rush-fee">20</span> USD</span></span>
+                            <span class="text-sm text-gray-600">🚀 <strong>Pedido Urgente</strong> (Entrega Rápida) <span class="text-red-500 text-xs ml-1 font-bold">+ $<span id="display-rush-fee">15</span> USD</span></span>
+                        </label>
+
+                        <!-- Invitaciones Digitales: solicitud de info -->
+                        <label class="flex items-start gap-2 cursor-pointer p-3 rounded border border-santa-pink/30 bg-santa-pink/5 hover:bg-santa-pink/10 transition-colors">
+                            <input type="checkbox" id="check-invitations" class="w-4 h-4 text-santa-pink rounded focus:ring-santa-pink mt-0.5">
+                            <span class="text-sm text-gray-700 leading-snug">
+                                <strong class="text-santa-pink">💌 Quiero recibir más información sobre las Invitaciones Digitales</strong><br>
+                                <span class="text-xs text-gray-500">Para una boda, cumpleaños, revelación, bautizo, XV años u otro evento próximo (aquí en USA o en México). Pregúntame por el descuento combo al contratar ambos servicios.</span>
+                            </span>
                         </label>
                     </div>
 
@@ -493,37 +594,44 @@
         <p class="text-gray-500 max-w-md mb-8">
             Gracias <span id="success-name" class="text-santa-pink font-bold"></span>.
             <br>
-            Abriendo WhatsApp para enviar los detalles de tu canción...
+            Abriendo WhatsApp para enviar los detalles...
         </p>
         <button onclick="location.reload()" class="text-santa-cyan hover:underline text-sm font-bold">Volver al inicio</button>
     </div>
 
     <footer class="bg-santa-dark py-10 text-white mt-auto border-t-4 border-santa-pink">
         <div class="max-w-6xl mx-auto px-4 text-center">
-            <!-- Logo Footer (ACTUALIZADO .png) -->
+            <!-- Logo Footer -->
             <div class="w-16 h-16 rounded-full overflow-hidden border-2 border-santa-pink shadow-md bg-white mx-auto mb-4">
                 <img src="Plaza Santa Ana.png" alt="Logo Plaza Santa Ana" class="w-full h-full object-cover">
             </div>
             <p class="text-xl font-heading font-bold uppercase tracking-widest">Plaza Santa Ana</p>
-            <p class="text-gray-400 text-xs uppercase tracking-widest mt-1">Canciones Personalizadas · México · USA</p>
+            <p class="text-gray-400 text-xs uppercase tracking-widest mt-1">Canciones Personalizadas · Santa Ana Hueytlalpan · Edición USA 🇺🇸</p>
             <div class="mt-6 flex justify-center gap-4 text-gray-400">
-                <a href="#" class="hover:text-white"><i class="fab fa-facebook fa-lg"></i></a>
-                <a href="#" class="hover:text-white"><i class="fab fa-instagram fa-lg"></i></a>
-                <a href="#" class="hover:text-white"><i class="fab fa-tiktok fa-lg"></i></a>
+                <a href="https://www.facebook.com/PlazaSantaAna2026" target="_blank" rel="noopener" class="hover:text-white" title="Facebook">
+                    <i class="fab fa-facebook fa-lg"></i>
+                </a>
+                <a href="https://www.instagram.com/plazasantaana.2026" target="_blank" rel="noopener" class="hover:text-white" title="Instagram">
+                    <i class="fab fa-instagram fa-lg"></i>
+                </a>
+                <a href="https://www.tiktok.com/@plaza.santa.ana2026" target="_blank" rel="noopener" class="hover:text-white" title="TikTok">
+                    <i class="fab fa-tiktok fa-lg"></i>
+                </a>
             </div>
         </div>
     </footer>
 
     <script>
         // ==========================================
-        //  1. CONFIGURACIÓN EDITABLE
+        //  1. CONFIGURACIÓN EDITABLE (USA - USD)
+        //  Sin anticipo: el precio ya incluye comisión de envío de dinero.
         // ==========================================
         let config = {
-            promoText: "Precios promoción del 01 al 30 Junio, celebra a esa persona especial como se debe ❤️",
-            priceBasic: 49,
-            pricePremium: 79,
-            priceAnimated: 99,
-            priceRush: 20, // Costo extra por urgencia
+            promoText: "Precios especiales para paisanos en EE.UU. - ya incluyen comisión de envío 💸",
+            priceBasic: 49,      // Plan Esencia (Audio)
+            pricePremium: 69,    // Plan Recuerdo (Video Reel)
+            priceAnimated: 99,   // Plan Legado (Reel + Animación + Versión corta)
+            priceRush: 15,       // Costo extra por urgencia en USD
             whatsappNumber: "527751193381"
         };
         // ==========================================
@@ -543,7 +651,7 @@
             storageBucket: "plaza-santa-ana.appspot.com",
         };
 
-        const appId = typeof __app_id !== 'undefined' ? __app_id : 'santa-ana-songs';
+        const appId = typeof __app_id !== 'undefined' ? __app_id : 'santa-ana-songs-usa';
 
         // Inicialización segura de Firebase
         try {
@@ -651,18 +759,18 @@
         function selectPlan(planName) {
             let price = 0;
             
-            if (planName === 'Básico') price = config.priceBasic;
-            else if (planName === 'Premium') price = config.pricePremium;
-            else if (planName === 'Animado') price = config.priceAnimated;
+            if (planName === 'Esencia') price = config.priceBasic;
+            else if (planName === 'Recuerdo') price = config.pricePremium;
+            else if (planName === 'Legado') price = config.priceAnimated;
 
             selectedPlan = { name: planName, price: parseInt(price) };
             
             document.getElementById('modal-plan-name').textContent = planName;
             document.getElementById('check-rush').checked = false; // Reset urgente
             
-            // Mostrar opciones de imagen solo si es Premium o Animado
+            // Mostrar opciones de imagen solo si es Recuerdo o Legado
             const videoOptions = document.getElementById('video-options-container');
-            if (planName === 'Premium' || planName === 'Animado') {
+            if (planName === 'Recuerdo' || planName === 'Legado') {
                 videoOptions.classList.remove('hidden');
             } else {
                 videoOptions.classList.add('hidden');
@@ -685,6 +793,7 @@
             }
             
             document.getElementById('modal-plan-price').textContent = `$${total} USD`;
+            document.getElementById('modal-total').textContent = total;
         }
 
         function closeModal() {
@@ -693,7 +802,7 @@
             panel.classList.add('translate-y-full');
             setTimeout(() => modal.classList.add('hidden'), 300);
             
-            // Pausar medios si estaban sonando al abrir modal (opcional, pero buena práctica)
+            // Pausar medios si estaban sonando al abrir modal
             stopOtherMedia(null); 
         }
 
@@ -706,18 +815,20 @@
 
             const name = document.getElementById('client-name').value;
             const location = document.getElementById('client-location').value;
-            const isSantaAna = document.getElementById('check-santa-ana').checked;
             const recipient = document.getElementById('song-recipient').value;
+            const recipientLocation = document.getElementById('recipient-location').value;
             const occasion = document.getElementById('song-occasion').value;
             const details = document.getElementById('song-details').value;
             const isRush = document.getElementById('check-rush').checked;
+            const referrer = document.getElementById('client-referrer').value.trim();
+            const wantsInvitationsInfo = document.getElementById('check-invitations').checked;
             
             let finalPrice = parseInt(selectedPlan.price);
             if(isRush) finalPrice += parseInt(config.priceRush);
 
             // Obtener preferencia de imagen si aplica
             let imagePref = '';
-            if (selectedPlan.name === 'Premium' || selectedPlan.name === 'Animado') {
+            if (selectedPlan.name === 'Recuerdo' || selectedPlan.name === 'Legado') {
                 const radio = document.querySelector('input[name="image-pref"]:checked');
                 if (radio) imagePref = radio.value;
             }
@@ -726,14 +837,18 @@
             const formData = {
                 customer: name,
                 location: location,
-                isSantaAna: isSantaAna,
+                isUSA: true,
                 plan: selectedPlan.name,
                 price: finalPrice,
+                currency: 'USD',
                 recipient: recipient,
+                recipientLocation: recipientLocation,
                 occasion: occasion,
                 details: details,
                 isRush: isRush,
                 imagePref: imagePref,
+                referrer: referrer || 'Ninguno',
+                wantsInvitationsInfo: wantsInvitationsInfo,
                 affiliate: affiliateCode || 'Directo',
                 date: new Date().toISOString()
             };
@@ -748,16 +863,18 @@
 
             // Generar Mensaje WhatsApp
             const line = "%0A";
-            let text = `👋 Hola *Plaza Santa Ana*, me interesa una canción personalizada.${line}${line}`;
+            let text = `👋 Hola *Plaza Santa Ana*, estoy en EE.UU. y quiero una canción personalizada.${line}${line}`;
             
             text += `📝 *DATOS DEL PEDIDO*${line}`;
-            text += `• Cliente: ${name} (${location})${line}`;
-            text += `• Paquete: *${selectedPlan.name}* ($${finalPrice} USD)${line}`;
+            text += `• Cliente: ${name} (${location}, USA)${line}`;
+            text += `• Paquete: *${selectedPlan.name}*${line}`;
+            text += `• Total: $${finalPrice} USD${line}`;
+            text += `• 💵 *Pago único al recibir la canción* (sin anticipo, para no pagar doble comisión de envío)${line}`;
             if (isRush) text += `• 🚀 *URGENTE* (Prioridad)${line}`;
-            if (isSantaAna) text += `• 📍 *Soy de Santa Ana* (Pago al recibir)${line}`;
             
             text += `${line}🎵 *DETALLES DE LA CANCIÓN*${line}`;
             text += `• Para: ${recipient}${line}`;
+            text += `• Ubicación de la persona: ${recipientLocation}${line}`;
             text += `• Ocasión: ${occasion}${line}`;
             text += `• Historia/Mensaje: ${details}${line}`;
 
@@ -768,10 +885,22 @@
                     text += `_(Adjuntaré la foto en este chat)_${line}`;
                 }
             }
+
+            // Referido
+            if (referrer) {
+                text += `${line}🤝 *REFERIDO*${line}`;
+                text += `• Me recomendó: ${referrer}${line}`;
+            }
+
+            // Solicitud de info sobre Invitaciones Digitales
+            if (wantsInvitationsInfo) {
+                text += `${line}💌 *INVITACIONES DIGITALES*${line}`;
+                text += `• ✅ Sí, quiero recibir más información sobre las invitaciones digitales (boda, cumpleaños, revelación, etc.) y aprovechar el descuento combo.${line}`;
+            }
             
             if (affiliateCode) text += `${line}(Ref: ${affiliateCode})`;
             
-            text += `${line}✨ *Espero confirmación para realizar el pago/anticipo.*`;
+            text += `${line}📍 *Pago desde USA al recibir mi canción* (transferencia Zelle/Cash App/Apple Pay o remesa Western Union/MoneyGram). Sin anticipo.`;
 
             const waLink = `https://wa.me/${config.whatsappNumber}?text=${text}`;
 
@@ -791,7 +920,7 @@
             document.getElementById('success-name').textContent = name;
             overlay.classList.remove('hidden');
             
-            // Confetti Rosa y Cian
+            // Confetti Rosa, Cian y Amarillo (colores mexicanos)
             const end = Date.now() + 2 * 1000;
             const colors = ['#E91E63', '#00BCD4', '#FFC107'];
             (function frame() {
